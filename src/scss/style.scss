@@ -2,3 +2,10 @@
 @import 'mixins';
 @import 'fonts';
 @import 'vendor';
+
+* {
+    font-family: raleway, sans-serif;
+}
+
+@import 'blocks/promo';
+@import 'blocks/slider';
