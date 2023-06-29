@@ -905,6 +905,9 @@ button.swiper-pagination-bullet {
 }
 .slider__img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 .slider_bg {
   z-index: 0;
