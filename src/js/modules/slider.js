@@ -41,4 +41,9 @@ export function slider() {
             item.classList.add('slider__item_active');
         });
     });
+
+    const sliderText = document.querySelector('.promo__wrapper');
+    sliderMain.on('slideChange', () => {
+        sliderMain.activeIndex > 0 ? sliderText.classList.add('promo__wrapper_hidden') : sliderText.classList.remove('promo__wrapper_hidden');
+    })
 }

@@ -2,7 +2,35 @@
     width: 100%;
     height: 100vh;
     background-color: var(--dark-color);
-    color: #FFFFFF;
-    line-height: 1.8;
     overflow: hidden;
+    &__wrapper {
+        position: absolute;
+        top: 20vh;
+        left: 8vw;
+        max-width: 24vw;
+        transition: opacity var(--transition), transform var(--transition);
+        &_hidden {
+            opacity: 0;
+            transform: translateY(5vh);
+            div {
+                transform: translateY(1vh);
+            }
+        }
+    }
+    &__title {
+        display: inline-block;
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: calc(var(--size-index) * 3.3);
+        font-weight: 900;
+        background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__description {
+        color: var(--light-color);
+        font-size: calc(var(--size-index) * .8);
+        line-height: 1.7;
+        opacity: .95;
+    }
 }
