@@ -6,6 +6,7 @@ export function slider() {
         centeredSlides: true,
         mousewheel: true,
         parallax: true,
+        slideToClickedSlide: true,
         breakpoints: {
             0: {
                 slidesPerView: 2.5,
@@ -26,4 +27,18 @@ export function slider() {
     });
 
     sliderMain.controller.control = sliderBg;
+
+    const sliderItems = document.querySelectorAll('.slider__item');
+    sliderItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (item.classList.contains('slider__item_active')) {
+                item.classList.remove('slider__item_active');
+                return;
+            }
+            sliderItems.forEach(item => {
+                item.classList.remove('slider__item_active');
+            });
+            item.classList.add('slider__item_active');
+        });
+    });
 }
